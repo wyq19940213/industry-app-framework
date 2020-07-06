@@ -22,6 +22,7 @@ public class JwtUtil {
      */
     public static String sign(String userId) {
         try {
+            System.out.println("--------userId-------"+userId);
             Date date = new Date(System.currentTimeMillis() + EXPIRE_TIME);
             Algorithm algorithm = Algorithm.HMAC256(SECRET);
             return JWT.create()
